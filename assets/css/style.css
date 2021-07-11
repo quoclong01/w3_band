@@ -1,0 +1,363 @@
+/* reset css*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.header {
+    height: 46px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width:100%;
+}
+
+.header__nav,
+.header__nav > li 
+{
+    display: inline-block;
+}
+
+.header__nav li {
+    position: relative;
+}
+
+.header__nav > li > a {
+    color: white;
+}
+
+.header__nav li a {
+    padding: 0 25px;
+    font-weight: 300;
+    font-size: 1rem;
+    display: inline-block;
+    line-height: 46px;
+    cursor: pointer;
+}
+.header__nav-subnav > li:hover > a,
+.header__nav > li:hover > a {
+    background-color: rgb(150, 150, 150);
+    color: #333;
+}
+
+.header__nav > li:hover > .header__nav-subnav {
+    display: block;
+}
+
+.header-icons {
+    color: white;
+    font-size: 1rem;
+    padding: 15px 20px;  
+    cursor: pointer; 
+}
+
+.header-icons:hover {
+    background-color: red;
+}
+
+.header__nav-subnav{
+    min-width: 160px;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+    display: none;
+}
+
+.header__nav-items::before {
+    content: '';
+    position: absolute;
+    top: 47%;
+    right: 13px;
+    width:0px;
+    height:0px;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:5px solid #fff;
+}
+
+.header__nav-subnav > li > a {
+    display: block;
+    color:#000;
+}
+
+.silder {
+    margin-top: 46px;
+    width: 100%;
+}
+
+.slider__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider__content img {
+    width:100%;
+}
+
+.slider__content-text {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+}
+
+.slider__content-text h3 {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.slider__content-text p {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 20px 0 ;
+}
+
+.container {
+
+}
+
+.container__about-section {
+    max-width: 800px;
+    margin: 75px auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.content-section > .section-heading {
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.content-section > .section-sub-heading{
+    font-size: 14px;
+    color:rgb(150, 150, 150);
+    font-style: italic;
+}
+.container__about-section > p {
+    text-align: justify;     
+    margin: 15px 0 30px 0;
+}
+.container__about-section p {
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 400;
+}
+
+.container__about-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container__about-item p {
+    margin-bottom: 10px;
+}
+
+.container__about-item img{
+    width: 154px;
+    height: 154px;
+    border-radius: 5px;
+}
+
+.container__tour {
+    background-color: #000;
+
+}
+
+.container__tour-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 15px;
+}
+.container__tour-date{
+    border: 1px solid gray;
+    background-color: white;
+    margin-top: 30px;
+} 
+
+.container__tour-date li {
+    border-bottom: 1px solid rgb(189, 189, 189);
+    display: block;
+    text-align: left;
+}
+
+.container__tour-date li p{
+    color: gray;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+
+.container__tour-date li p span {
+    margin-left: 16px;
+    padding: 0 10px;
+    color: white;
+    background-color:#f44336;
+    font-weight: 300;
+}
+
+
+.container__tour-date li p span.container__tour-date-radio {
+    border-radius: 50%;
+    background-color: #000;
+    margin-left: 625px;
+    position:absolute;
+    top: 10px;
+    right: 5%;
+}
+
+.container__tour-add{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+.container__tour-add-item{
+    width: 245px;
+    height: 400px;
+    background-color: white;
+}
+
+.container__tour-add-item img {
+    width: 100%;
+    height: 184px;
+    filter: grayscale(0);
+}
+
+.container__tour-add-item img:hover {
+    filter: grayscale(0.5);
+    opacity: 0.7;
+} 
+
+.container__tour-add-content {
+    text-align: left;
+    padding: 10px 0 0 20px;
+    font-size: 14px;
+}
+.container__tour-add-content p {
+    padding: 10px 0;
+}
+
+.container__tour-add-content p:nth-child(2) {
+    color: gray;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.container__tour-add-content button {
+    border: none;
+    background-color: #000;
+    color: white;
+    padding: 10px 15px;
+}
+
+.container__contact{
+   
+}
+.container__contact-section{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 75px 15px;
+}
+
+.container__contact-content{
+    display: flex;
+    padding: 50px 0;
+}
+
+.container__contact-left{
+    text-align: left;
+    min-width: 49.9999%;
+}
+
+.container__contact-left p i {
+    margin-right: 20px;
+}
+
+.container__contact-right{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.container__contact-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container__contact-input input{
+    padding: 8px 0 8px 5px;
+    width: 48%;
+    border: 1px solid rgb(175, 175, 175);
+}
+
+.container__contact-input input[type="Message"]{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.container__contact-right button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+
+.footer {
+
+}
+
+.footer-section{
+    padding: 70px 0;
+    text-align: center;
+
+}
+.footer-section .footer__icon{
+    color: rgb(104, 104, 104);
+    font-size: 22px;
+}
+
+.footer-section p,
+.footer-section p a  {
+    color: gray;
+    font-size: 15px;
+    padding: 15px 0;
+    font-weight: 300;
+}
+
+.footer-section p a {
+    text-decoration: underline;
+}
+
+.img-map {
+    width:100%;
+    filter: grayscale(0.5);
+}
